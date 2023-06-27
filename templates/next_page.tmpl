@@ -1,0 +1,7 @@
+export default{{ if .ServerComponent }} async{{else}}{{end}} function Page() {
+    return (
+        <div>
+            <h1>"{{ .Name }}" page works!</h1>
+        </div>
+    );
+}

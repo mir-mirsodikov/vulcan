@@ -4,7 +4,7 @@ build: export
 
 compile:
 	@echo "Compiling the project..."
-	@go build -o bin/$(TARGET) main.go
+	@go build -tags embed -o bin/$(TARGET) main.go
 	@echo "Project compiled successfully!"
 
 export: compile

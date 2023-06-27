@@ -3,11 +3,6 @@
 A CLI tool for generating files and folders for JavaScript meta frameworks like
 Next.js, Nuxt.js, SvelteKit, etc.
 
-> **Note:** This is my first time working with Rust and I am still learning the
-> language and best practices in CLIs, in general.
-> I am sure there are better ways to do things and I am open to any
-> suggestions.
-
 # Goal
 
 I have been working with various JavaScript frameworks and I noticed that there
@@ -19,6 +14,7 @@ and folders with ease.
 Frameworks:
 - [ ] Next.js
 - [ ] SvelteKit
+- [ ] Astro
 - [ ] Nuxt.js
 
 Features:

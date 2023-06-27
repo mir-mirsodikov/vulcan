@@ -2,6 +2,7 @@ package next
 
 import (
 	"fmt"
+	"github.com/mir-mirsodikov/vulcan/pkg/chalk"
 	"github.com/mir-mirsodikov/vulcan/templates"
 	"github.com/spf13/cobra"
 	"os"
@@ -77,7 +78,7 @@ var pageCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		fmt.Println("Successfully created a new page named:", pageOpts.Name, " ...")
+		fmt.Println(chalk.Green("Successfully created a new page named:", pageOpts.Name, " ..."))
 	},
 }
 

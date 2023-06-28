@@ -34,10 +34,10 @@ func (c *Component) SetPath(desiredPath string) {
 	}
 }
 
-func (p *Page) GetPagePath() string {
-	return p.Path + "page.tsx"
+func (p *Page) GetPagePath(ext string) string {
+	return p.Path + "page" + ext
 }
 
-func (c *Component) GetComponentPath() string {
-	return c.Path + c.Name + ".tsx"
+func (c *Component) GetComponentPath(ext string) string {
+	return c.Path + c.Name + ext
 }

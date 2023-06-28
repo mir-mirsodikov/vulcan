@@ -5,6 +5,7 @@ import (
 	"github.com/mir-mirsodikov/vulcan/pkg/next"
 	"github.com/mir-mirsodikov/vulcan/templates"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 	"os"
 	"text/template"
 )
@@ -47,7 +48,14 @@ var componentCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		newFile, err := os.Create(componentOpts.GetComponentPath())
+		useJsx := viper.GetBool("Next.JSX")
+		ext := ".tsx"
+
+		if useJsx {
+			ext = ".jsx"
+		}
+
+		newFile, err := os.Create(componentOpts.GetComponentPath(ext))
 		if err != nil {
 			fmt.Println("Error creating file:", err)
 			os.Exit(1)

@@ -2,7 +2,7 @@ package next
 
 import (
 	"fmt"
-	"github.com/mir-mirsodikov/vulcan/pkg/next"
+	"github.com/mir-mirsodikov/vulcan/models"
 	"github.com/mir-mirsodikov/vulcan/templates"
 	"github.com/spf13/cobra"
 	"os"
@@ -23,7 +23,7 @@ var componentCmd = &cobra.Command{
 		isServerComponent, _ := cmd.Flags().GetBool("server-component")
 		desiredPath, _ := cmd.Flags().GetString("path")
 
-		componentOpts := next.Component{
+		componentOpts := models.Component{
 			Name:            args[0],
 			ServerComponent: isServerComponent,
 		}

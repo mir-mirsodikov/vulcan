@@ -2,7 +2,7 @@ package next
 
 import (
 	"fmt"
-	"github.com/mir-mirsodikov/vulcan/pkg/next"
+	"github.com/mir-mirsodikov/vulcan/models"
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +16,7 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
-	pageVars := next.Component{}
+	pageVars := models.Component{}
 	var path string
 	addCmd.PersistentFlags().BoolVarP(&pageVars.ServerComponent, "server-component", "s", false, "Create the page as a server component")
 	addCmd.PersistentFlags().StringVarP(&path, "path", "p", "", "Specify the path for the page")

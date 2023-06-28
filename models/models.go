@@ -1,4 +1,4 @@
-package next
+package models
 
 import (
 	"github.com/mir-mirsodikov/vulcan/utils"

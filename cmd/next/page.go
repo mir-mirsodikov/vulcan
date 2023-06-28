@@ -2,8 +2,8 @@ package next
 
 import (
 	"fmt"
+	"github.com/mir-mirsodikov/vulcan/models"
 	"github.com/mir-mirsodikov/vulcan/pkg/chalk"
-	"github.com/mir-mirsodikov/vulcan/pkg/next"
 	"github.com/mir-mirsodikov/vulcan/templates"
 	"github.com/spf13/cobra"
 	"os"
@@ -24,7 +24,7 @@ var pageCmd = &cobra.Command{
 		isServerComponent, _ := cmd.Flags().GetBool("server-component")
 		desiredPath, _ := cmd.Flags().GetString("path")
 
-		pageOpts := next.Page{
+		pageOpts := models.Page{
 			Name:            args[0],
 			ServerComponent: isServerComponent,
 		}

@@ -1,13 +1,13 @@
 TARGET := vulcan
 
-build: export
+install: export
 
-compile:
+build:
 	@echo "Compiling the project..."
 	@go build -tags embed -o bin/$(TARGET) main.go
 	@echo "Project compiled successfully!"
 
-export: compile
+export: build
 	@echo "\nExporting the project into the system..."
 	@cp bin/$(TARGET) /usr/local/bin
 	@echo "Project exported successfully!"
@@ -23,7 +23,7 @@ test:
 	@go test -v ./...
 	@echo "Tests ran successfully!"
 
-install:
+get-dependencies:
 	@echo "Installing dependencies..."
 	@go mod download
 	@echo "Dependencies installed successfully!"

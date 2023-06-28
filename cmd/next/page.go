@@ -62,7 +62,7 @@ var pageCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		fmt.Println(chalk.Green("Successfully created a new page named:", pageOpts.Name, " ..."))
+		fmt.Println(chalk.Green("`" + pageOpts.Name + "` page created!"))
 	},
 }
 

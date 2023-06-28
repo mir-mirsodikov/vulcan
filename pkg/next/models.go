@@ -35,9 +35,9 @@ func (c *Component) SetPath(desiredPath string) {
 }
 
 func (p *Page) GetPagePath() string {
-	return p.Path + "page.jsx"
+	return p.Path + "page.tsx"
 }
 
 func (c *Component) GetComponentPath() string {
-	return c.Path + c.Name + ".jsx"
+	return c.Path + c.Name + ".tsx"
 }

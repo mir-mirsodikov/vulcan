@@ -55,7 +55,7 @@ $ vulcan next add component <name> [options]
 
 Options:
 
-- `--path | -p` - The path to the directory where the file will be created. 
+- `--path | -p` - The path to the directory where the file will be created.
   - This is relative to the `/app` directory for pages.
   - This is relative to the `/components` directory for components.
 - `--server-component | -s` - Creates the page or component as a server component.

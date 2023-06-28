@@ -10,9 +10,10 @@ import (
 )
 
 var componentCmd = &cobra.Command{
-	Use:   "component [name]",
-	Short: "Add a new component",
-	Long:  `Add a new component`,
+	Use:     "component [name]",
+	Aliases: []string{"c"},
+	Short:   "Add a new component",
+	Long:    `Add a new component`,
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			fmt.Println("Please provide a name for the page.")

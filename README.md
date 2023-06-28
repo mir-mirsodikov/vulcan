@@ -33,7 +33,7 @@ Features:
 ```bash
 $ git clone https://github.com/mir-mirsodikov/vulcan
 $ cd vulcan
-$ make build
+$ make install
 ```
 
 > If there is a permission error, try running `sudo make build`

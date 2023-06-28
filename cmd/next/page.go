@@ -11,9 +11,10 @@ import (
 )
 
 var pageCmd = &cobra.Command{
-	Use:   "page [name]",
-	Short: "Add a new page",
-	Long:  `Add a new page`,
+	Use:     "page [name]",
+	Aliases: []string{"p"},
+	Short:   "Add a new page",
+	Long:    `Add a new page`,
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			fmt.Println("Please provide a name for the page.")

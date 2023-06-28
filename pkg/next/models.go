@@ -1,5 +1,9 @@
 package next
 
+import (
+	"github.com/mir-mirsodikov/vulcan/utils"
+)
+
 type Component struct {
 	Name            string
 	ServerComponent bool
@@ -34,10 +38,12 @@ func (c *Component) SetPath(desiredPath string) {
 	}
 }
 
-func (p *Page) GetPagePath(ext string) string {
+func (p *Page) GetPagePath() string {
+	ext := utils.GetFileExtension()
 	return p.Path + "page" + ext
 }
 
-func (c *Component) GetComponentPath(ext string) string {
+func (c *Component) GetComponentPath() string {
+	ext := utils.GetFileExtension()
 	return c.Path + c.Name + ext
 }

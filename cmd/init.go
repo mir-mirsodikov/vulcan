@@ -12,11 +12,13 @@ var initCmd = &cobra.Command{
 	Short: "Initialize a new project",
 	Long:  `Initialize a new project`,
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("Initializing a new project...")
 		framework := args[0]
 
 		switch framework {
 		case "next":
 			fmt.Println("Initializing a new Next.js project...")
+
 			file, err := os.Create("vulcan.yaml")
 
 			config, _ := configs.ConfigFiles.ReadFile("next.yaml")

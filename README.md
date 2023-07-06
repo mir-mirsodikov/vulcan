@@ -43,6 +43,11 @@ $ make install
 ### Next.js
 Generate pages and components for Next.js. Only supports Next.js 13+ with the `/app` directory.
 
+Help:
+```bash
+$ vulcan next --help
+```
+
 Create a new page:
 ```bash
 $ vulcan next add page <name> [options]
@@ -58,7 +63,7 @@ Options:
 - `--path | -p` - The path to the directory where the file will be created.
   - This is relative to the `/app` directory for pages.
   - This is relative to the `/components` directory for components.
-- `--server-component | -s` - Creates the page or component as a server component.
+- `--client-component | -c` - Creates the page or component as a client component.
 
 ## Examples
 
@@ -70,9 +75,9 @@ vulcan next add page about
 
 ```bash
 # creates a `about/contact` folder in `app` and adds a `page.jsx` file
-# as a server component
+# as a client component
 
-vulcan next add page about --path contact --server-component
+vulcan next add page about --path contact --client-component
 ```
 
 ```bash
@@ -83,7 +88,7 @@ vulcan next add component sign-up-form
 
 ```bash
 # creates a `table.jsx` file in `components/table`
-# as a server component
+# as a client component
 
-vulcan next add component row --path table -s
+vulcan next add component row --path table -c
 ```

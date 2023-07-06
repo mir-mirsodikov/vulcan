@@ -6,13 +6,13 @@ import (
 
 type Component struct {
 	Name            string
-	ServerComponent bool
+	ClientComponent bool
 	Path            string
 }
 
 type Page struct {
 	Name            string
-	ServerComponent bool
+	ClientComponent bool
 	Path            string
 }
 

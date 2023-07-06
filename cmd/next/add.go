@@ -12,7 +12,7 @@ var addCmd = &cobra.Command{
 }
 
 func init() {
-	addCmd.PersistentFlags().BoolP("server-component", "s", false, "Create the page as a server component")
+	addCmd.PersistentFlags().BoolP("client-component", "c", false, "Create the page as a client component")
 	addCmd.PersistentFlags().StringP("path", "p", "", "Specify the path for the page")
 	addCmd.PersistentFlags().Bool("jsx", false, "Create the component/page using JSX")
 	viper.BindPFlag("next.jsx", addCmd.PersistentFlags().Lookup("jsx"))

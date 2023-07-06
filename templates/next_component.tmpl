@@ -1,5 +1,6 @@
+{{if .ClientComponent}}"use client";{{end}}
 
-export{{ if .ServerComponent }} async{{ end }} function {{ .Name }}() {
+export function {{ .Name }}() {
     return (
         <div>
             {{ .Name }} Component

@@ -20,12 +20,12 @@ var componentCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		isServerComponent, _ := cmd.Flags().GetBool("server-component")
+		isClientComponent, _ := cmd.Flags().GetBool("client-component")
 		desiredPath, _ := cmd.Flags().GetString("path")
 
 		componentOpts := models.Component{
 			Name:            args[0],
-			ServerComponent: isServerComponent,
+			ClientComponent: isClientComponent,
 		}
 
 		componentOpts.SetPath(desiredPath)

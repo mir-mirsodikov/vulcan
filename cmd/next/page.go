@@ -21,12 +21,12 @@ var pageCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		isServerComponent, _ := cmd.Flags().GetBool("server-component")
+		isClientComponent, _ := cmd.Flags().GetBool("client-component")
 		desiredPath, _ := cmd.Flags().GetString("path")
 
 		pageOpts := models.Page{
 			Name:            args[0],
-			ServerComponent: isServerComponent,
+			ClientComponent: isClientComponent,
 		}
 
 		pageOpts.SetPath(desiredPath)

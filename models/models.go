@@ -1,4 +1,4 @@
-package next
+package models
 
 import (
 	"github.com/mir-mirsodikov/vulcan/utils"
@@ -18,8 +18,6 @@ type Page struct {
 
 type ResourceInterface interface {
 	SetPath(path string)
-	GetDirPath() string
-	GetResourcePath() string
 }
 
 func (p *Page) SetPath(desiredPath string) {
